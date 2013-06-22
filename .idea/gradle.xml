@@ -4,6 +4,7 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/build.gradle" />
+        <option name="gradleHome" value="$USER_HOME$/Build/Gradle" />
         <option name="useAutoImport" value="true" />
       </GradleProjectSettings>
     </option>
