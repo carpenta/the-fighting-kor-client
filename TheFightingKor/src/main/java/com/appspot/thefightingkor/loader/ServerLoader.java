@@ -1,10 +1,10 @@
-package com.appspot.thefightingkor.task;
+package com.appspot.thefightingkor.loader;
 
-import android.os.AsyncTask;
+import android.content.Context;
+import android.support.v4.content.AsyncTaskLoader;
 import android.util.Log;
 
 import com.appspot.thefightingkor.data.Participant;
-import com.appspot.thefightingkor.task.callback.ServerTaskCallback;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -20,30 +20,29 @@ import java.net.URL;
 import java.util.ArrayList;
 
 /**
- * Created by mc2e on 13. 6. 22..
+ * Created by mc2e on 13. 7. 12..
  */
-public class ServerTask extends AsyncTask<String, Integer, ArrayList<Participant>> {
+public class ServerLoader extends AsyncTaskLoader<ArrayList<Participant>> {
 
     private final String url = "http://the-fighting-kor.appspot.com/json";
 
-    private ServerTaskCallback mCallback;
-
     private OkHttpClient client = null;
 
-    public ServerTask(ServerTaskCallback mCallback) {
-        this.mCallback = mCallback;
-    }
+    public ServerLoader(Context context) {
+        super(context);
 
-
-    @Override
-    protected void onPreExecute() {
-        super.onPreExecute();
         client = new OkHttpClient();
     }
 
     @Override
-    protected ArrayList<Participant> doInBackground(String... strings) {
+    protected void onStartLoading() {
+        super.onStartLoading();
 
+        onForceLoad();
+    }
+
+    @Override
+    public ArrayList<Participant> loadInBackground() {
         ArrayList<Participant> list = new ArrayList<Participant>();
 
 
@@ -58,31 +57,24 @@ public class ServerTask extends AsyncTask<String, Integer, ArrayList<Participant
 
             JsonArray jsonArray = parser.parse(json).getAsJsonArray();
 
-            for(JsonElement item : jsonArray) {
+            for (JsonElement item : jsonArray) {
 
-                Log.d("IntroActivity", "item: " +item.toString());
+                Log.d("IntroActivity", "item: " + item.toString());
 
-                    Participant participant = gson.fromJson(item.getAsJsonObject(), Participant.class);
+                Participant participant = gson.fromJson(item.getAsJsonObject(), Participant.class);
 
-                    list.add(participant);
+                list.add(participant);
             }
 
-            Log.d("IntroActivity", "List Size: " +list.size());
+            Log.d("IntroActivity", "List Size: " + list.size());
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
-        } catch(IOException ioe){
+        } catch (IOException ioe) {
             ioe.printStackTrace();
         }
 
         return list;
-    }
-
-    @Override
-    protected void onPostExecute(ArrayList<Participant> result) {
-        super.onPostExecute(result);
-
-        mCallback.onTaskCompleted(result);
     }
 
     private String get(URL url) throws IOException {
@@ -92,14 +84,14 @@ public class ServerTask extends AsyncTask<String, Integer, ArrayList<Participant
 
         InputStream in = null;
 
-        try{
+        try {
             in = connection.getInputStream();
 
             byte[] response = readFully(in);
 
             return new String(response, "UTF-8");
         } finally {
-            if(in != null)
+            if (in != null)
                 in.close();
         }
     }
@@ -112,4 +104,5 @@ public class ServerTask extends AsyncTask<String, Integer, ArrayList<Participant
         }
         return out.toByteArray();
     }
+
 }

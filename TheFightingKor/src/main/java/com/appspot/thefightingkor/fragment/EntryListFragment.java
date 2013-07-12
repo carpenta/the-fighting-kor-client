@@ -2,6 +2,8 @@ package com.appspot.thefightingkor.fragment;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.Loader;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,23 +13,20 @@ import android.widget.ProgressBar;
 import com.appspot.thefightingkor.R;
 import com.appspot.thefightingkor.adapter.EntryListAdapter;
 import com.appspot.thefightingkor.data.Participant;
-import com.appspot.thefightingkor.task.ServerTask;
-import com.appspot.thefightingkor.task.callback.ServerTaskCallback;
+import com.appspot.thefightingkor.loader.ServerLoader;
 
 import java.util.ArrayList;
 
 /**
  * Created by mc2e on 13. 6. 22..
  */
-public class EntryListFragment extends BaseFragment implements ServerTaskCallback {
+public class EntryListFragment extends BaseFragment implements LoaderManager.LoaderCallbacks<ArrayList<Participant>> {
 
     private ListView mListView;
 
     private EntryListAdapter mAdapter;
 
     private ArrayList<Participant> mList;
-
-    private ServerTask mServerTask;
 
     private ProgressBar mProgress;
 
@@ -55,47 +54,14 @@ public class EntryListFragment extends BaseFragment implements ServerTaskCallbac
 
         mListView.setAdapter(mAdapter);
 
-        executeServerTask();
+        getLoaderManager().initLoader(0, null, this);
+
     }
 
     @Override
     public void onPause() {
         super.onPause();
 
-        stopServerTasek();
-    }
-
-    private void executeServerTask() {
-
-        stopServerTasek();
-        displayLoading(true);
-
-        mServerTask = new ServerTask(this);
-
-        mServerTask.execute();
-    }
-
-    private void stopServerTasek() {
-
-        if(mServerTask != null)
-            mServerTask.cancel(true);
-
-        mServerTask = null;
-    }
-
-
-    @Override
-    public void onTaskCompleted(Object obj) {
-
-        if(obj != null) {
-            if(mList != null)
-                mList.clear();
-
-            mList.addAll((ArrayList<Participant>)obj);
-
-            mAdapter.notifyDataSetChanged();
-        }
-        displayLoading(false);
     }
 
     private void displayLoading(boolean show) {
@@ -111,5 +77,32 @@ public class EntryListFragment extends BaseFragment implements ServerTaskCallbac
             if(mProgress.getVisibility() == View.VISIBLE)
                 mProgress.setVisibility(View.GONE);
         }
+    }
+
+    @Override
+    public Loader<ArrayList<Participant>> onCreateLoader(int i, Bundle bundle) {
+
+        displayLoading(true);
+
+        return new ServerLoader(getActivity());
+    }
+
+    @Override
+    public void onLoadFinished(Loader<ArrayList<Participant>> arrayListLoader, ArrayList<Participant> participants) {
+
+        if(participants != null) {
+            if(mList != null)
+                mList.clear();
+
+            mList.addAll(participants);
+
+            mAdapter.notifyDataSetChanged();
+        }
+        displayLoading(false);
+    }
+
+    @Override
+    public void onLoaderReset(Loader<ArrayList<Participant>> arrayListLoader) {
+
     }
 }
