@@ -17,105 +17,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9c4e3ef-4fb6-4875-8164-c19b02d14075" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TheFightingKor/libs/gson-2.2.4.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TheFightingKor/libs/okhttp-1.1.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TheFightingKor/src/main/java/com/appspot/thefightingkor/adapter/EntryListAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TheFightingKor/src/main/java/com/appspot/thefightingkor/fragment/EntryListFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TheFightingKor/src/main/java/com/appspot/thefightingkor/data/Participant.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TheFightingKor/src/main/java/com/appspot/thefightingkor/task/ServerTask.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TheFightingKor/src/main/java/com/appspot/thefightingkor/task/callback/ServerTaskCallback.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TheFightingKor/src/main/res/layout/entry_list_item.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TheFightingKor/src/main/res/layout/fragment_entry_list.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/okhttp_1_1_0.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/apk/TheFightingKor-debug-unaligned.apk" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/apk/TheFightingKor-release-unsigned.apk" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/classes/debug/com/appspot/thefightingkor/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/classes/debug/com/appspot/thefightingkor/IntroAcitity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/classes/debug/com/appspot/thefightingkor/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/classes/debug/com/appspot/thefightingkor/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/classes/debug/com/appspot/thefightingkor/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/classes/debug/com/appspot/thefightingkor/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/classes/debug/com/appspot/thefightingkor/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/classes/debug/com/appspot/thefightingkor/R$menu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/classes/debug/com/appspot/thefightingkor/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/classes/debug/com/appspot/thefightingkor/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/classes/debug/com/appspot/thefightingkor/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/classes/release/com/appspot/thefightingkor/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/classes/release/com/appspot/thefightingkor/IntroAcitity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/classes/release/com/appspot/thefightingkor/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/classes/release/com/appspot/thefightingkor/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/classes/release/com/appspot/thefightingkor/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/classes/release/com/appspot/thefightingkor/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/classes/release/com/appspot/thefightingkor/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/classes/release/com/appspot/thefightingkor/R$menu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/classes/release/com/appspot/thefightingkor/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/classes/release/com/appspot/thefightingkor/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/classes/release/com/appspot/thefightingkor/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/incremental/aidl/debug/dependency.store" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/incremental/aidl/debug/inputs.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/incremental/aidl/debug/outputs.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/incremental/aidl/release/dependency.store" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/incremental/aidl/release/inputs.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/incremental/aidl/release/outputs.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/incremental/dex/debug/inputs.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/incremental/dex/debug/outputs.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/incremental/dex/release/inputs.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/incremental/dex/release/outputs.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/incremental/mergeAssets/debug/inputs.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/incremental/mergeAssets/debug/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/incremental/mergeAssets/debug/outputs.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/incremental/mergeAssets/release/inputs.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/incremental/mergeAssets/release/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/incremental/mergeAssets/release/outputs.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/incremental/mergeResources/debug/inputs.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/incremental/mergeResources/debug/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/incremental/mergeResources/debug/outputs.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/incremental/mergeResources/release/inputs.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/incremental/mergeResources/release/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/incremental/mergeResources/release/outputs.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/libs/TheFightingKor-debug.ap_" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/libs/TheFightingKor-debug.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/libs/TheFightingKor-release.ap_" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/libs/TheFightingKor-release.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/manifests/debug/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/manifests/release/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/res/all/debug/drawable-hdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/res/all/debug/drawable-mdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/res/all/debug/drawable-xhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/res/all/debug/drawable-xxhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/res/all/debug/layout/activity_intro.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/res/all/debug/menu/intro_acitity.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/res/all/debug/values-sw720dp-land/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/res/all/debug/values-v11/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/res/all/debug/values-v14/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/res/all/debug/values/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/res/all/release/drawable-hdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/res/all/release/drawable-mdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/res/all/release/drawable-xhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/res/all/release/drawable-xxhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/res/all/release/layout/activity_intro.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/res/all/release/menu/intro_acitity.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/res/all/release/values-sw720dp-land/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/res/all/release/values-v11/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/res/all/release/values-v14/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/res/all/release/values/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/source/buildConfig/debug/com/appspot/thefightingkor/BuildConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/source/buildConfig/release/com/appspot/thefightingkor/BuildConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/source/r/debug/com/appspot/thefightingkor/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFightingKor/build/source/r/release/com/appspot/thefightingkor/R.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheFightingKor/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/TheFightingKor/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheFightingKor/src/main/java/com/appspot/thefightingkor/activity/BaseActivity.java" afterPath="$PROJECT_DIR$/TheFightingKor/src/main/java/com/appspot/thefightingkor/activity/BaseActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheFightingKor/src/main/java/com/appspot/thefightingkor/fragment/BaseFragment.java" afterPath="$PROJECT_DIR$/TheFightingKor/src/main/java/com/appspot/thefightingkor/fragment/BaseFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheFightingKor/src/main/java/com/appspot/thefightingkor/activity/IntroAcitity.java" afterPath="$PROJECT_DIR$/TheFightingKor/src/main/java/com/appspot/thefightingkor/activity/IntroAcitity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheFightingKor/TheFightingKor.iml" afterPath="$PROJECT_DIR$/TheFightingKor/TheFightingKor.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheFightingKorProject.iml" afterPath="$PROJECT_DIR$/TheFightingKorProject.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheFightingKor/src/main/res/layout/activity_intro.xml" afterPath="$PROJECT_DIR$/TheFightingKor/src/main/res/layout/activity_intro.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheFightingKor/build.gradle" afterPath="$PROJECT_DIR$/TheFightingKor/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TheFightingKor.iws" />
@@ -134,7 +39,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -171,6 +75,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -179,7 +84,17 @@
     <favorites_list name="TheFightingKor" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="TheFightingKorProject.iml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TheFightingKorProject.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="0" selection-start="537" selection-end="537" vertical-scroll-proportion="0.29291844" vertical-offset="0" max-vertical-offset="932">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -207,22 +122,27 @@
           <key>
             <ExternalProjectPojo>
               <option name="name" value="TheFightingKorProject" />
-              <option name="path" value="$PROJECT_DIR$/build.gradle" />
+              <option name="path" value="$PROJECT_DIR$" />
             </ExternalProjectPojo>
           </key>
           <value>
             <list>
               <ExternalProjectPojo>
                 <option name="name" value="TheFightingKorProject" />
-                <option name="path" value="$PROJECT_DIR$/build.gradle" />
+                <option name="path" value="$PROJECT_DIR$" />
               </ExternalProjectPojo>
               <ExternalProjectPojo>
                 <option name="name" value="TheFightingKor" />
-                <option name="path" value="$PROJECT_DIR$/TheFightingKor/build.gradle" />
+                <option name="path" value="$PROJECT_DIR$/TheFightingKor" />
               </ExternalProjectPojo>
             </list>
           </value>
         </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$" value="1373631321000" />
       </map>
     </option>
   </component>
@@ -252,8 +172,9 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
+    <option name="x" value="1280" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -286,93 +207,43 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TheFightingKor" />
+              <option name="myItemId" value="TheFightingKorProject" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TheFightingKor" />
+              <option name="myItemId" value="TheFightingKorProject" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="TheFightingKorProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TheFightingKor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TheFightingKorProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TheFightingKor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TheFightingKor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TheFightingKorProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gradle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TheFightingKor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TheFightingKorProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="OverrideImplement.combined" value="true" />
-    <property name="project.structure.proportion" value="0.15" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/TheFightingKor/libs/gson-2.2.4.jar!/" />
-    <property name="project.structure.side.proportion" value="0.35747665" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="04ce38db1cd87702" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="n4_api_16" />
-    <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="FullScreen" value="true" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -585,32 +456,32 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="1280" y="0" width="1920" height="1080" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934132" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25506938" sideWeight="0.28645834" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5729167" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.67083335" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14781217" sideWeight="0.67083335" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.67083335" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30470017" sideWeight="0.519943" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20064034" sideWeight="0.519943" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48005697" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934132" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -619,13 +490,13 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25506938" sideWeight="0.28645834" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.67083335" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24550898" sideWeight="0.51975685" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48024315" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -703,11 +574,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/TheFightingKor/libs/okhttp-1.1.0.jar!/com/squareup/okhttp/OkHttpClient.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="19" selection-start="168" selection-end="168" vertical-scroll-proportion="-1.285956" vertical-offset="860" max-vertical-offset="1560" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="616" />
@@ -715,9 +581,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TheFightingKor/src/main/java/com/appspot/thefightingkor/activity/BaseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-          <folding />
-        </state>
+        <state line="7" column="13" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TheFightingKor/build.gradle">
@@ -732,26 +596,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TheFightingKor/src/main/java/com/appspot/thefightingkor/data/Participant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="444" selection-end="444" vertical-scroll-proportion="0.025222551" vertical-offset="238" max-vertical-offset="1190">
-          <folding />
-        </state>
+        <state line="15" column="0" selection-start="444" selection-end="444" vertical-scroll-proportion="0.025222551" vertical-offset="238" max-vertical-offset="1190" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TheFightingKor/src/main/java/com/appspot/thefightingkor/task/ServerTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="5" selection-start="2225" selection-end="2225" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2057">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1260#1273#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="85" column="5" selection-start="2225" selection-end="2225" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2057" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TheFightingKor/src/main/java/com/appspot/thefightingkor/task/callback/ServerTaskCallback.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="44" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <folding />
-        </state>
+        <state line="7" column="44" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TheFightingKor/src/main/res/layout/activity_intro.xml">
@@ -759,23 +614,17 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="620" selection-end="620" vertical-scroll-proportion="-6.296296" vertical-offset="0" max-vertical-offset="323">
-          <folding />
-        </state>
+        <state line="10" column="0" selection-start="620" selection-end="620" vertical-scroll-proportion="-6.296296" vertical-offset="0" max-vertical-offset="323" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TheFightingKor/src/main/java/com/appspot/thefightingkor/activity/IntroAcitity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="26" selection-start="764" selection-end="764" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
-          <folding />
-        </state>
+        <state line="26" column="26" selection-start="764" selection-end="764" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TheFightingKor/src/main/java/com/appspot/thefightingkor/fragment/EntryListFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="0" selection-start="1816" selection-end="1816" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="1819">
-          <folding />
-        </state>
+        <state line="71" column="0" selection-start="1816" selection-end="1816" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="1819" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TheFightingKor/src/main/res/layout/fragment_entry_list.xml">
@@ -783,16 +632,12 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="36" selection-start="765" selection-end="765" vertical-scroll-proportion="-11.962963" vertical-offset="0" max-vertical-offset="459">
-          <folding />
-        </state>
+        <state line="19" column="36" selection-start="765" selection-end="765" vertical-scroll-proportion="-11.962963" vertical-offset="0" max-vertical-offset="459" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TheFightingKor/src/main/java/com/appspot/thefightingkor/adapter/EntryListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="85" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="1496">
-          <folding />
-        </state>
+        <state line="38" column="85" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="1496" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TheFightingKor/src/main/res/layout/entry_list_item.xml">
@@ -800,21 +645,22 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="34" selection-start="248" selection-end="248" vertical-scroll-proportion="0.13137558" vertical-offset="0" max-vertical-offset="714">
-          <folding />
-        </state>
+        <state line="5" column="34" selection-start="248" selection-end="248" vertical-scroll-proportion="0.13137558" vertical-offset="0" max-vertical-offset="714" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="661">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="661" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="674">
+        <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="674" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TheFightingKorProject.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="537" selection-end="537" vertical-scroll-proportion="0.29291844" vertical-offset="0" max-vertical-offset="932">
           <folding />
         </state>
       </provider>
