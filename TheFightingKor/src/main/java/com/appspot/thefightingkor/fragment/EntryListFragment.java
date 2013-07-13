@@ -1,8 +1,8 @@
 package com.appspot.thefightingkor.fragment;
 
 import android.app.Activity;
+import android.support.v4.app.LoaderManager.*;
 import android.os.Bundle;
-import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,7 +20,7 @@ import java.util.ArrayList;
 /**
  * Created by mc2e on 13. 6. 22..
  */
-public class EntryListFragment extends BaseFragment implements LoaderManager.LoaderCallbacks<ArrayList<Participant>> {
+public class EntryListFragment extends BaseFragment implements LoaderCallbacks<ArrayList<Participant>> {
 
     private ListView mListView;
 
@@ -38,6 +38,9 @@ public class EntryListFragment extends BaseFragment implements LoaderManager.Loa
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle bundle) {
 
+        getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
+        getActivity().getActionBar().setHomeButtonEnabled(true);
+
         mList = new ArrayList<Participant>();
 
         return inflater.inflate(R.layout.fragment_entry_list, container, false);
@@ -54,8 +57,8 @@ public class EntryListFragment extends BaseFragment implements LoaderManager.Loa
 
         mListView.setAdapter(mAdapter);
 
+        // start AsyncTaskLoader
         getLoaderManager().initLoader(0, null, this);
-
     }
 
     @Override

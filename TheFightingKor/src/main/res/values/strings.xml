@@ -3,6 +3,11 @@
 
     <string name="app_name">TheFightingKor</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
-
+    <string-array name="main_manu_array">
+        <item>제 1 경기장</item>
+        <item>제 2 경기장</item>
+        <item>제 3 경기장</item>
+        <item>제 4 경기장</item>
+        <item>Entry</item>
+    </string-array>
 </resources>
