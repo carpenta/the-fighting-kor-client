@@ -6,7 +6,7 @@ import android.view.MenuItem;
 
 import com.appspot.thefightingkor.R;
 import com.appspot.thefightingkor.fragment.BaseFragment;
-import com.appspot.thefightingkor.fragment.EntryListFragment;
+import com.appspot.thefightingkor.fragment.PlayerListFragment;
 import com.appspot.thefightingkor.fragment.MainFragment;
 
 public class IntroAcitity extends BaseActivity {
@@ -37,7 +37,7 @@ public class IntroAcitity extends BaseActivity {
                     .commitAllowingStateLoss();
         }else if(tag.equalsIgnoreCase(ENTRY_TAG)) {
 
-            fragment = new EntryListFragment();
+            fragment = new PlayerListFragment();
             getSupportFragmentManager()
                     .beginTransaction()
                     .replace(R.id.container, fragment, tag)

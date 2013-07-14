@@ -7,30 +7,30 @@
               android:orientation="vertical">
 
     <TextView
-            android:id="@+id/entry_item_emblem"
+            android:id="@+id/player_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
     <TextView
-            android:id="@+id/entry_item_name"
+            android:id="@+id/player_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
     <TextView
-            android:id="@+id/entry_item_image"
+            android:id="@+id/player_assoc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     <TextView
-            android:id="@+id/entry_item_operator"
+            android:id="@+id/player_weight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     <TextView
-            android:id="@+id/entry_item_date"
+            android:id="@+id/player_grade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
     <TextView
-            android:id="@+id/entry_item_association"
+            android:id="@+id/player_etc_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 

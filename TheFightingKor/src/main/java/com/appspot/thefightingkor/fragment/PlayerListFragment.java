@@ -11,22 +11,22 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 
 import com.appspot.thefightingkor.R;
-import com.appspot.thefightingkor.adapter.EntryListAdapter;
-import com.appspot.thefightingkor.data.Participant;
-import com.appspot.thefightingkor.loader.ServerLoader;
+import com.appspot.thefightingkor.adapter.PlayerListAdapter;
+import com.appspot.thefightingkor.data.Player;
+import com.appspot.thefightingkor.loader.PlayerServerLoader;
 
 import java.util.ArrayList;
 
 /**
  * Created by mc2e on 13. 6. 22..
  */
-public class EntryListFragment extends BaseFragment implements LoaderCallbacks<ArrayList<Participant>> {
+public class PlayerListFragment extends BaseFragment implements LoaderCallbacks<ArrayList<Player>> {
 
     private ListView mListView;
 
-    private EntryListAdapter mAdapter;
+    private PlayerListAdapter mAdapter;
 
-    private ArrayList<Participant> mList;
+    private ArrayList<Player> mList;
 
     private ProgressBar mProgress;
 
@@ -41,19 +41,19 @@ public class EntryListFragment extends BaseFragment implements LoaderCallbacks<A
         getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
         getActivity().getActionBar().setHomeButtonEnabled(true);
 
-        mList = new ArrayList<Participant>();
+        mList = new ArrayList<Player>();
 
-        return inflater.inflate(R.layout.fragment_entry_list, container, false);
+        return inflater.inflate(R.layout.fragment_player_list, container, false);
     }
 
     @Override
     public void onViewCreated(View v, Bundle bundle) {
         super.onViewCreated(v, bundle);
 
-        mProgress = (ProgressBar)v.findViewById(R.id.entry_list_progressbar);
+        mProgress = (ProgressBar)v.findViewById(R.id.player_list_progressbar);
 
-        mListView = (ListView)v.findViewById(R.id.entry_list_view);
-        mAdapter = new EntryListAdapter(getActivity(), mList);
+        mListView = (ListView)v.findViewById(R.id.player_list_view);
+        mAdapter = new PlayerListAdapter(getActivity(), mList);
 
         mListView.setAdapter(mAdapter);
 
@@ -83,21 +83,21 @@ public class EntryListFragment extends BaseFragment implements LoaderCallbacks<A
     }
 
     @Override
-    public Loader<ArrayList<Participant>> onCreateLoader(int i, Bundle bundle) {
+    public Loader<ArrayList<Player>> onCreateLoader(int i, Bundle bundle) {
 
         displayLoading(true);
 
-        return new ServerLoader(getActivity());
+        return new PlayerServerLoader(getActivity());
     }
 
     @Override
-    public void onLoadFinished(Loader<ArrayList<Participant>> arrayListLoader, ArrayList<Participant> participants) {
+    public void onLoadFinished(Loader<ArrayList<Player>> arrayListLoader, ArrayList<Player> players) {
 
-        if(participants != null) {
+        if(players != null) {
             if(mList != null)
                 mList.clear();
 
-            mList.addAll(participants);
+            mList.addAll(players);
 
             mAdapter.notifyDataSetChanged();
         }
@@ -105,7 +105,7 @@ public class EntryListFragment extends BaseFragment implements LoaderCallbacks<A
     }
 
     @Override
-    public void onLoaderReset(Loader<ArrayList<Participant>> arrayListLoader) {
+    public void onLoaderReset(Loader<ArrayList<Player>> arrayListLoader) {
 
     }
 }

@@ -4,7 +4,8 @@ import android.content.Context;
 import android.support.v4.content.AsyncTaskLoader;
 import android.util.Log;
 
-import com.appspot.thefightingkor.data.Participant;
+import com.appspot.thefightingkor.Server.ServerInfo;
+import com.appspot.thefightingkor.data.Player;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -22,13 +23,11 @@ import java.util.ArrayList;
 /**
  * Created by mc2e on 13. 7. 12..
  */
-public class ServerLoader extends AsyncTaskLoader<ArrayList<Participant>> {
-
-    private final String url = "http://the-fighting-kor.appspot.com/json";
+public class PlayerServerLoader extends AsyncTaskLoader<ArrayList<Player>> {
 
     private OkHttpClient client = null;
 
-    public ServerLoader(Context context) {
+    public PlayerServerLoader(Context context) {
         super(context);
 
         client = new OkHttpClient();
@@ -42,12 +41,12 @@ public class ServerLoader extends AsyncTaskLoader<ArrayList<Participant>> {
     }
 
     @Override
-    public ArrayList<Participant> loadInBackground() {
-        ArrayList<Participant> list = new ArrayList<Participant>();
+    public ArrayList<Player> loadInBackground() {
+        ArrayList<Player> list = new ArrayList<Player>();
 
 
         try {
-            URL site = new URL(url);
+            URL site = new URL(ServerInfo.PLAYER_URL);
 
             String json = get(site);
 
@@ -61,9 +60,9 @@ public class ServerLoader extends AsyncTaskLoader<ArrayList<Participant>> {
 
                 Log.d("IntroActivity", "item: " + item.toString());
 
-                Participant participant = gson.fromJson(item.getAsJsonObject(), Participant.class);
+                Player player = gson.fromJson(item.getAsJsonObject(), Player.class);
 
-                list.add(participant);
+                list.add(player);
             }
 
             Log.d("IntroActivity", "List Size: " + list.size());
@@ -104,5 +103,4 @@ public class ServerLoader extends AsyncTaskLoader<ArrayList<Participant>> {
         }
         return out.toByteArray();
     }
-
 }
