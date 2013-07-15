@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="grade_white">#ffffff</color>
+    <color name="grade_blue">#0000ff</color>
+    <color name="grade_purple">#800080</color>
+    <color name="grade_brown">#654321</color>
+    <color name="grade_black">#000000</color>
+</resources>
