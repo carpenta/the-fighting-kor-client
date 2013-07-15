@@ -70,7 +70,10 @@ public class MainFragment extends BaseFragment implements AdapterView.OnItemClic
     @Override
     public void onItemClick(AdapterView<?> parent, View v, int pos, long id) {
 
-        if(pos == 4) {
+        if(pos == 0) {
+
+            executeFragmet(GAME_TAG);
+        }else if(pos == 4) {
             executeFragmet(ENTRY_TAG);
         }
     }

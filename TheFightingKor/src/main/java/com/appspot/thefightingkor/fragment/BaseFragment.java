@@ -16,6 +16,8 @@ public class BaseFragment extends Fragment {
 
     public final String ENTRY_TAG = "entryfragment";
 
+    public final String GAME_TAG = "gameinfofragment";
+
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);

@@ -7,14 +7,15 @@ import com.google.gson.annotations.SerializedName;
  */
 public class Game {
 
-    @SerializedName("gid") private String gid;
-    @SerializedName("player1") private Player player1;
-    @SerializedName("player2") private Player player2;
+    @SerializedName("id") private String id;
+    @SerializedName("participant1") private Player player1;
+    @SerializedName("participant2") private Player player2;
     @SerializedName("status") private String status;
     @SerializedName("winner") private String winner;
+    @SerializedName("tournament_num") private String tournamentNum;
 
-    public String getGid() {
-        return gid;
+    public String getId() {
+        return id;
     }
 
     public Player getPlayer1() {
@@ -31,5 +32,9 @@ public class Game {
 
     public String getWinner() {
         return winner;
+    }
+
+    public String getTournamentNum() {
+        return tournamentNum;
     }
 }

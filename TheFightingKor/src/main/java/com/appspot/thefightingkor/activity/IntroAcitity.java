@@ -6,6 +6,7 @@ import android.view.MenuItem;
 
 import com.appspot.thefightingkor.R;
 import com.appspot.thefightingkor.fragment.BaseFragment;
+import com.appspot.thefightingkor.fragment.GameInfoListFragment;
 import com.appspot.thefightingkor.fragment.PlayerListFragment;
 import com.appspot.thefightingkor.fragment.MainFragment;
 
@@ -21,6 +22,8 @@ public class IntroAcitity extends BaseActivity {
     private final String MAIN_TAG = "mainfragment";
 
     private final String ENTRY_TAG = "entryfragment";
+
+    private final String GAME_TAG = "gameinfofragment";
 
     public void executeFragment(String tag) {
 
@@ -43,9 +46,14 @@ public class IntroAcitity extends BaseActivity {
                     .replace(R.id.container, fragment, tag)
                     .addToBackStack(null)
                     .commitAllowingStateLoss();
+        }else if(tag.equalsIgnoreCase(GAME_TAG)) {
+            fragment = new GameInfoListFragment();
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.container, fragment, tag)
+                    .addToBackStack(null)
+                    .commitAllowingStateLoss();
         }
-
-
     }
 
 
