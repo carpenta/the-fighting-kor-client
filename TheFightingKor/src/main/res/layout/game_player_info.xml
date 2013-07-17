@@ -1,51 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:gravity="center"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-            android:id="@+id/game_player_id"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="player id"/>
+    <LinearLayout
+                  android:orientation="vertical"
+                  android:gravity="center"
+                  android:layout_margin="6dp"
+                  android:background="@android:color/white"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent">
 
-    <TextView
-            android:id="@+id/game_player_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="player name"/>
+        <TextView
+                android:id="@+id/game_player_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="player id"/>
 
-    <TextView
-            android:gravity="center"
-            android:id="@+id/game_player_grade"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="player grade"/>
+        <TextView
+                android:id="@+id/game_player_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="player name"/>
 
-    <TextView
-            android:gravity="center"
-            android:id="@+id/game_player_assoc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="player assoc"/>
+        <TextView
+                android:gravity="center"
+                android:id="@+id/game_player_grade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="player grade"/>
 
-    <TextView
-            android:gravity="center"
-            android:id="@+id/game_player_weight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="player weight"/>
+        <TextView
+                android:gravity="center"
+                android:id="@+id/game_player_assoc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="player assoc"/>
 
-    <TextView
-            android:gravity="center"
-            android:id="@+id/game_player_etc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="player etc"/>
+        <TextView
+                android:gravity="center"
+                android:id="@+id/game_player_weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="player weight"/>
 
-</LinearLayout>
+        <TextView
+                android:gravity="center"
+                android:id="@+id/game_player_etc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="player etc"/>
+
+    </LinearLayout>
+</FrameLayout>

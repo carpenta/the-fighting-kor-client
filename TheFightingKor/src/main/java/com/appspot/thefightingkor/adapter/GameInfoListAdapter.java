@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.appspot.thefightingkor.R;
 import com.appspot.thefightingkor.data.Game;
 import com.appspot.thefightingkor.data.Player;
+import com.appspot.thefightingkor.util.ColorUtil;
 import com.appspot.thefightingkor.view.PlayerView;
 
 import java.util.ArrayList;
@@ -40,11 +41,13 @@ public class GameInfoListAdapter extends ArrayAdapter<Game> {
         Holder holder = null;
 
         if(convertView == null) {
+
             holder = new Holder();
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.game, parent, false);
             initView(holder, convertView);
             convertView.setTag(holder);
         }else {
+
             holder = (Holder)convertView.getTag();
         }
 
@@ -57,6 +60,7 @@ public class GameInfoListAdapter extends ArrayAdapter<Game> {
 
         h.gameResult = (TextView)v.findViewById(R.id.game_result);
         h.tournamentNumber = (TextView)v.findViewById(R.id.game_number);
+
         h.player1View = v.findViewById(R.id.game_player1);
         h.player2View = v.findViewById(R.id.game_player2);
 
@@ -71,9 +75,13 @@ public class GameInfoListAdapter extends ArrayAdapter<Game> {
 
         h.player1.setData(item.getPlayer1());
         h.player2.setData(item.getPlayer2());
+
+        h.player1View.setBackgroundResource(R.color.grade_blue);
+        h.player2View.setBackgroundResource(R.color.grade_brown);
     }
 
     class Holder {
+
         TextView gameResult;
         TextView tournamentNumber;
 

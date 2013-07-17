@@ -24,7 +24,7 @@ public class PlayerView {
     }
 
     public void setData(Player p) {
-        id.setText(p.getId());
+        //id.setText(p.getId());
         name.setText(p.getName());
         grade.setText(p.getGrade());
         assoc.setText(p.getAssoc());
