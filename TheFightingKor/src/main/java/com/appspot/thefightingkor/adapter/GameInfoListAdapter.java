@@ -16,6 +16,9 @@ import com.appspot.thefightingkor.view.PlayerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.InjectView;
+import butterknife.Views;
+
 /**
  * Created by mc2e on 13. 7. 14..
  */
@@ -42,9 +45,9 @@ public class GameInfoListAdapter extends ArrayAdapter<Game> {
 
         if(convertView == null) {
 
-            holder = new Holder();
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.game, parent, false);
-            initView(holder, convertView);
+            holder = new Holder(convertView);
+            initView(holder);
             convertView.setTag(holder);
         }else {
 
@@ -56,13 +59,7 @@ public class GameInfoListAdapter extends ArrayAdapter<Game> {
         return convertView;
     }
 
-    private void initView(Holder h, View v) {
-
-        h.gameResult = (TextView)v.findViewById(R.id.game_result);
-        h.tournamentNumber = (TextView)v.findViewById(R.id.game_number);
-
-        h.player1View = v.findViewById(R.id.game_player1);
-        h.player2View = v.findViewById(R.id.game_player2);
+    private void initView(Holder h) {
 
         h.player1 = new PlayerView(h.player1View);
         h.player2 = new PlayerView(h.player2View);
@@ -82,13 +79,16 @@ public class GameInfoListAdapter extends ArrayAdapter<Game> {
 
     class Holder {
 
-        TextView gameResult;
-        TextView tournamentNumber;
-
-        View player1View;
-        View player2View;
+        @InjectView(R.id.game_result) TextView gameResult;
+        @InjectView(R.id.game_number) TextView tournamentNumber;
+        @InjectView(R.id.game_player1) View player1View;
+        @InjectView(R.id.game_player2) View player2View;
 
         PlayerView player1;
         PlayerView player2;
+
+        public Holder(View v) {
+            Views.inject(this, v);
+        }
     }
 }

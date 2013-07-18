@@ -17,18 +17,21 @@ import com.appspot.thefightingkor.loader.PlayerServerLoader;
 
 import java.util.ArrayList;
 
+import butterknife.InjectView;
+import butterknife.Views;
+
 /**
  * Created by mc2e on 13. 6. 22..
  */
 public class PlayerListFragment extends BaseFragment implements LoaderCallbacks<ArrayList<Player>> {
 
-    private ListView mListView;
+    @InjectView(R.id.player_list_view) ListView mListView;
+
+    @InjectView(R.id.player_list_progressbar) ProgressBar mProgress;
 
     private PlayerListAdapter mAdapter;
 
     private ArrayList<Player> mList;
-
-    private ProgressBar mProgress;
 
     @Override
     public void onAttach(Activity activity) {
@@ -38,25 +41,24 @@ public class PlayerListFragment extends BaseFragment implements LoaderCallbacks<
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle bundle) {
 
+        View view = inflater.inflate(R.layout.fragment_player_list, container, false);
+
         getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
         getActivity().getActionBar().setHomeButtonEnabled(true);
 
         mList = new ArrayList<Player>();
 
-        return inflater.inflate(R.layout.fragment_player_list, container, false);
+        return view;
     }
 
     @Override
     public void onViewCreated(View v, Bundle bundle) {
         super.onViewCreated(v, bundle);
+        Views.inject(this, v);
 
-        mProgress = (ProgressBar)v.findViewById(R.id.player_list_progressbar);
-
-        mListView = (ListView)v.findViewById(R.id.player_list_view);
         mAdapter = new PlayerListAdapter(getActivity(), mList);
 
         mListView.setAdapter(mAdapter);
-
         // start AsyncTaskLoader
         getLoaderManager().initLoader(0, null, this);
     }

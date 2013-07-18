@@ -12,6 +12,9 @@ import com.appspot.thefightingkor.data.Player;
 
 import java.util.List;
 
+import butterknife.InjectView;
+import butterknife.Views;
+
 /**
  * Created by mc2e on 13. 6. 22..
  */
@@ -34,8 +37,7 @@ public class PlayerListAdapter extends ArrayAdapter<Player> {
         if(convertView == null) {
 
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.player, parent, false);
-            holder = new Holder();
-            initLayout(holder, convertView);
+            holder = new Holder(convertView);
             convertView.setTag(holder);
         }else {
             holder = (Holder)convertView.getTag();
@@ -56,24 +58,17 @@ public class PlayerListAdapter extends ArrayAdapter<Player> {
         h.etc.setText(item.getEtc());
     }
 
-    private void initLayout(Holder h, View v) {
-
-        h.id = (TextView)v.findViewById(R.id.player_id);
-        h.name = (TextView)v.findViewById(R.id.player_name);
-        h.association = (TextView)v.findViewById(R.id.player_assoc);
-        h.weight = (TextView)v.findViewById(R.id.player_weight);
-        h.grade = (TextView)v.findViewById(R.id.player_grade);
-        h.etc = (TextView)v.findViewById(R.id.player_etc_info);
-    }
-
-
     class Holder {
 
-        TextView id;
-        TextView name;
-        TextView association;
-        TextView weight;
-        TextView grade;
-        TextView etc;
+        @InjectView(R.id.player_id)         TextView id;
+        @InjectView(R.id.player_name)       TextView name;
+        @InjectView(R.id.player_assoc)      TextView association;
+        @InjectView(R.id.player_weight)     TextView weight;
+        @InjectView(R.id.player_grade)      TextView grade;
+        @InjectView(R.id.player_etc_info)   TextView etc;
+
+        public Holder(View v) {
+            Views.inject(this, v);
+        }
     }
 }

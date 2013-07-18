@@ -16,18 +16,19 @@ import com.appspot.thefightingkor.loader.GameInfoServerLoader;
 
 import java.util.ArrayList;
 
+import butterknife.InjectView;
+import butterknife.Views;
+
 /**
  * Created by mc2e on 13. 7. 14..
  */
 public class GameInfoListFragment extends BaseFragment implements LoaderManager.LoaderCallbacks<ArrayList<Game>>{
 
-    private ListView mListView;
+    @InjectView(R.id.game_list_view) ListView mListView;
+    @InjectView(R.id.game_list_progressbar) ProgressBar mProgress;
 
     private GameInfoListAdapter mAdapter;
-
     private ArrayList<Game> mList;
-
-    private ProgressBar mProgress;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle bundle) {
@@ -37,16 +38,15 @@ public class GameInfoListFragment extends BaseFragment implements LoaderManager.
 
         mList = new ArrayList<Game>();
 
-        return inflater.inflate(R.layout.fragment_game_list, container, false);
+        View v = inflater.inflate(R.layout.fragment_game_list, container, false);
+        return v;
     }
 
     @Override
     public void onViewCreated(View view, Bundle bundle) {
         super.onViewCreated(view, bundle);
+        Views.inject(this, view);
 
-        mProgress = (ProgressBar)view.findViewById(R.id.game_list_progressbar);
-
-        mListView = (ListView)view.findViewById(R.id.game_list_view);
         mAdapter = new GameInfoListAdapter(getActivity(), mList);
         mListView.setAdapter(mAdapter);
 

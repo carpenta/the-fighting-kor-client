@@ -11,6 +11,9 @@ import com.appspot.thefightingkor.R;
 
 import java.util.List;
 
+import butterknife.InjectView;
+import butterknife.Views;
+
 /**
  * Created by mc2e on 13. 7. 13..
  */
@@ -36,13 +39,8 @@ public class MainListAdapter extends ArrayAdapter<String> {
         Holder holder = null;
 
         if (convertView == null) {
-
-            holder = new Holder();
-
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.main_list_item, parent, false);
-
-            initView(holder, convertView);
-
+            holder = new Holder(convertView);
             convertView.setTag(holder);
         }else {
 
@@ -54,12 +52,11 @@ public class MainListAdapter extends ArrayAdapter<String> {
         return convertView;
     }
 
-    private void initView(Holder h, View v) {
-
-        h.name = (TextView)v.findViewById(R.id.arena_name);
-    }
-
     class Holder  {
-        TextView name;
+        @InjectView(R.id.arena_name) TextView name;
+
+        public Holder(View v) {
+            Views.inject(this, v);
+        }
     }
 }

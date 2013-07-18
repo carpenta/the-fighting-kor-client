@@ -6,21 +6,23 @@ import android.widget.TextView;
 import com.appspot.thefightingkor.R;
 import com.appspot.thefightingkor.data.Player;
 
+import static butterknife.Views.findById;
+
 /**
  * Created by Administrator on 13. 7. 15.
  */
 public class PlayerView {
 
-    private TextView id, name, grade, assoc, weight, etc;
+    TextView id, name, grade, assoc, weight, etc;
 
     public PlayerView(View v) {
 
-        id = (TextView)v.findViewById(R.id.game_player_id);
-        name = (TextView)v.findViewById(R.id.game_player_name);
-        grade = (TextView)v.findViewById(R.id.game_player_grade);
-        assoc = (TextView)v.findViewById(R.id.game_player_assoc);
-        weight = (TextView)v.findViewById(R.id.game_player_weight);
-        etc = (TextView)v.findViewById(R.id.game_player_etc);
+        id = findById(v, R.id.game_player_id);
+        name = findById(v, R.id.game_player_name);
+        grade = findById(v, R.id.game_player_grade);
+        assoc = findById(v, R.id.game_player_assoc);
+        weight = findById(v, R.id.game_player_weight);
+        etc = findById(v, R.id.game_player_etc);
     }
 
     public void setData(Player p) {
