@@ -12,7 +12,7 @@ public class Player {
     @SerializedName("association") private String assoc;
     @SerializedName("weight") private String weight;
     @SerializedName("grade") private String grade;
-    @SerializedName("etc") private String etc;
+    @SerializedName("group") private String group;
 
     public String getId() {
         return id;
@@ -34,7 +34,7 @@ public class Player {
         return grade;
     }
 
-    public String getEtc() {
-        return etc;
+    public String getGroup() {
+        return group;
     }
 }

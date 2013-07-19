@@ -2,17 +2,29 @@ package com.appspot.thefightingkor.data;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.concurrent.ScheduledExecutorService;
+
 /**
  * Created by mc2e on 13. 7. 14..
  */
 public class Game {
 
+    @SerializedName("tournament") private Tournament info;
     @SerializedName("id") private String id;
-    @SerializedName("participant1") private Player player1;
-    @SerializedName("participant2") private Player player2;
+    @SerializedName("player1") private Player player1;
+    @SerializedName("player2") private Player player2;
     @SerializedName("status") private String status;
     @SerializedName("winner") private String winner;
     @SerializedName("tournament_num") private String tournamentNum;
+    @SerializedName("playground_num") private String playgroundNum;
+
+    public String getPlaygroundNum() {
+        return playgroundNum;
+    }
+
+    public Tournament getInfo() {
+        return info;
+    }
 
     public String getId() {
         return id;

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:background="@android:color/white">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="OpenSource License"
+                android:textSize="20dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Butter Knife (v2.0.1)"
+                    android:textStyle="bold"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_gray"
+                    android:text="@string/license_butterknife"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="OkHttp (v1.1.0)"
+                    android:textStyle="bold"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:background="@color/bg_gray"
+                    android:layout_height="wrap_content"
+                    android:text="@string/license_okhttp"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gson (v2.2.4)"
+                    android:textStyle="bold"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:background="@color/bg_gray"
+                    android:layout_height="wrap_content"
+                    android:text="@string/license_gson"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

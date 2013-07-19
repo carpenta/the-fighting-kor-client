@@ -1,6 +1,7 @@
 package com.appspot.thefightingkor.adapter;
 
 import android.content.Context;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,31 +55,33 @@ public class GameInfoListAdapter extends ArrayAdapter<Game> {
             holder = (Holder)convertView.getTag();
         }
 
-        setValue(holder, getItem(position));
+        Game game = getItem(position);
+        if(game != null) {
+            setValue(holder, getItem(position));
+        }
+
 
         return convertView;
     }
 
     private void initView(Holder h) {
 
-        h.player1 = new PlayerView(h.player1View);
-        h.player2 = new PlayerView(h.player2View);
+        h.player1 = new PlayerView(h.player1View, getContext());
+        h.player2 = new PlayerView(h.player2View, getContext());
     }
 
     private void setValue(Holder h, Game item) {
 
-        h.gameResult.setText(item.getStatus());
+        h.gameName.setText(item.getInfo().getName());
+        h.gameResult.setText(getStatus(item));
         h.tournamentNumber.setText(item.getTournamentNum());
-
         h.player1.setData(item.getPlayer1());
         h.player2.setData(item.getPlayer2());
-
-        h.player1View.setBackgroundResource(R.color.grade_blue);
-        h.player2View.setBackgroundResource(R.color.grade_brown);
     }
 
     class Holder {
 
+        @InjectView(R.id.game_name) TextView gameName;
         @InjectView(R.id.game_result) TextView gameResult;
         @InjectView(R.id.game_number) TextView tournamentNumber;
         @InjectView(R.id.game_player1) View player1View;
@@ -91,4 +94,22 @@ public class GameInfoListAdapter extends ArrayAdapter<Game> {
             Views.inject(this, v);
         }
     }
+
+    private String getStatus(Game g) {
+
+        String result = "";
+
+        String status = g.getStatus();
+
+        if(status != null) {
+            if(status.equalsIgnoreCase("running")) {
+                result = getContext().getString(R.string.text_game_play);
+            }else {
+                result = getContext().getString(R.string.text_game_end);
+            }
+        }
+
+        return result;
+    }
+
 }

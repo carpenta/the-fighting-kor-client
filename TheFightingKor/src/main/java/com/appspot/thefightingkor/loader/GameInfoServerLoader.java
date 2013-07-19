@@ -28,9 +28,12 @@ public class GameInfoServerLoader extends AsyncTaskLoader<ArrayList<Game>>{
 
     private OkHttpClient client = null;
 
-    public GameInfoServerLoader(Context context) {
+    private int position =1;
+
+    public GameInfoServerLoader(Context context, int position) {
         super(context);
         client = new OkHttpClient();
+        this.position = position;
     }
 
     @Override
@@ -47,7 +50,9 @@ public class GameInfoServerLoader extends AsyncTaskLoader<ArrayList<Game>>{
 
         try {
             // test
-            URL site = new URL(ServerInfo.GAME_LIST_URL2);
+            URL site = new URL(ServerInfo.GAME_LIST_URL+position);
+
+            Log.i("GameInfoServerLoader","Request URL : "+site);
 
             String json = get(site);
 

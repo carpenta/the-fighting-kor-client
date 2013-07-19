@@ -1,5 +1,6 @@
 package com.appspot.thefightingkor.view;
 
+import android.content.Context;
 import android.view.View;
 import android.widget.TextView;
 
@@ -13,24 +14,50 @@ import static butterknife.Views.findById;
  */
 public class PlayerView {
 
-    TextView id, name, grade, assoc, weight, etc;
+    TextView name, assoc, weight, group;
+    View grade;
 
-    public PlayerView(View v) {
+    String[] gradeLevel = new String[5];
 
-        id = findById(v, R.id.game_player_id);
+    public PlayerView(View v, Context ctx) {
+
         name = findById(v, R.id.game_player_name);
         grade = findById(v, R.id.game_player_grade);
         assoc = findById(v, R.id.game_player_assoc);
         weight = findById(v, R.id.game_player_weight);
-        etc = findById(v, R.id.game_player_etc);
+        group = findById(v, R.id.game_player_group);
+
+        gradeLevel = ctx.getResources().getStringArray(R.array.grade_level);
     }
 
     public void setData(Player p) {
-        //id.setText(p.getId());
-        name.setText(p.getName());
-        grade.setText(p.getGrade());
-        assoc.setText(p.getAssoc());
-        weight.setText(p.getWeight());
-        etc.setText(p.getEtc());
+
+        if(p != null) {
+            name.setText(p.getName());
+            assoc.setText(p.getAssoc());
+            weight.setText(p.getWeight());
+            group.setText(p.getGroup());
+
+            String playerGrade = p.getGrade();
+
+            if(playerGrade != null) {
+
+                if(playerGrade.equalsIgnoreCase(gradeLevel[0])) {
+                    grade.setBackgroundResource(R.color.grade_white);
+                } else if(playerGrade.equalsIgnoreCase(gradeLevel[1])) {
+                    grade.setBackgroundResource(R.color.grade_blue);
+                } else if(playerGrade.equalsIgnoreCase(gradeLevel[2])) {
+                    grade.setBackgroundResource(R.color.grade_purple);
+                } else if(playerGrade.equalsIgnoreCase(gradeLevel[3])){
+                    grade.setBackgroundResource(R.color.grade_brown);
+
+                } else if(playerGrade.equalsIgnoreCase(gradeLevel[4])) {
+                    grade.setBackgroundResource(R.color.grade_black);
+                } else {
+                    grade.setBackgroundResource(R.color.grade_white);
+                }
+
+            }
+        }
     }
 }

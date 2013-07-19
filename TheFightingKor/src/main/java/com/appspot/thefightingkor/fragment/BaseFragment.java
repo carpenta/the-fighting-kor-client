@@ -16,7 +16,7 @@ public class BaseFragment extends Fragment {
 
     public final String ENTRY_TAG = "entryfragment";
 
-    public final String GAME_TAG = "gameinfofragment";
+    public final String GAME_LIST_TAG = "game_list_";
 
     @Override
     public void onAttach(Activity activity) {
@@ -27,10 +27,10 @@ public class BaseFragment extends Fragment {
         }
     }
 
-    public void executeFragmet(String tag) {
+    public void executeFragmet(String tag, int pos) {
 
         if(activity != null) {
-            activity.executeFragment(tag);
+            activity.executeFragment(tag, pos);
         }
     }
 }

@@ -2,17 +2,57 @@
 <resources>
 
     <string name="app_name">TheFightingKor</string>
-    <string name="action_settings">License</string>
+    <string name="action_license">License</string>
+    <string name="action_information">Information</string>
     <string-array name="main_menu_array">
         <item>제 1 경기장</item>
         <item>제 2 경기장</item>
         <item>제 3 경기장</item>
         <item>제 4 경기장</item>
-        <item>Entry</item>
+        <item>선수  명단</item>
     </string-array>
 
-    <string name="copyright">Copyright <a href="mailto:dev.eastern@gmail.com">dev.eastern</a>. All rights reserved.</string>
+    <string-array name="grade_level">
+        <item>화이트</item>
+        <item>블루</item>
+        <item>퍼플</item>
+        <item>브라운</item>
+        <item>블랙</item>
+    </string-array>
+
+    <string name="text_game_play">경기중</string>
+    <string name="text_game_end">경기종료</string>
+
+    <string name="copyright">Copyright dev.eastern@gmail.com.\nAll rights reserved.</string>
     <string name="copyright_email">dev.eastern@gmail.com</string>
+
+    <string name="information_title">
+        제 7회 춘천 오픈 브라직 주짓수 챔피언십
+    </string>
+
+    <string name="information_title2">
+        주관: 한국주짓수협회(BRAJIK)\n\n주최: 한국주짓수협회 춘천
+    </string>
+
+    <string name="information_contents">
+
+        대회개요: 국제 브라질 주짓수 연맹(IBJJF)이 정하는 규칙에 의한 BJJ GI 오픈 대회\n\n
+        일시: 2013 년 8월 10일 토요일(오전10시 시합시작) 시합직전계체\n\n
+        장소: 춘천 호반체육관 (강원도 춘천시 석사동 303)\n\n
+        접수기간 : 2013년 7월 26일~2013년 8월 1일\n\n
+        참가 자격\n
+        -감염 또는 심장과 폐 기능상의 건강이 양호한 자\n
+        -스포츠보험 가입자(미가입시 본인 책임. 부상에 대해선 현장 응급처치만 가능. 후속 치료는 본인 부담)\n\n
+        관람 정보\n
+        -무료관람 가능\n
+        -대회 운영을 방해하거나 대회 임원의 지시에 따르지 않을시 퇴장 조치\n\n
+        주의 사항\n
+        -국제 브라질리언 주짓수 연맹(IBJJF)이 정한 규칙을 채택\n
+        -참가 신청 후 부상 등으로 출전 불가능할 경우 이월 불가능\n
+        -선수 호명 시 준비되지 않은 선수는 실격처리\n
+        -흰색, 파랑색, 흑색을 제외한 도복은 착용금지\n
+        (여성부는 색상자유)
+    </string>
 
     <string name="license_okhttp">
         Copyright 2013 Square, Inc.\n\n

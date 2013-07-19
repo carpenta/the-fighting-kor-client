@@ -55,7 +55,7 @@ public class PlayerListAdapter extends ArrayAdapter<Player> {
         h.association.setText(item.getAssoc());
         h.weight.setText(item.getWeight());
         h.grade.setText(item.getGrade());
-        h.etc.setText(item.getEtc());
+        h.group.setText(item.getGroup());
     }
 
     class Holder {
@@ -65,7 +65,7 @@ public class PlayerListAdapter extends ArrayAdapter<Player> {
         @InjectView(R.id.player_assoc)      TextView association;
         @InjectView(R.id.player_weight)     TextView weight;
         @InjectView(R.id.player_grade)      TextView grade;
-        @InjectView(R.id.player_etc_info)   TextView etc;
+        @InjectView(R.id.player_group)   TextView group;
 
         public Holder(View v) {
             Views.inject(this, v);

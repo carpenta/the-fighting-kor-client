@@ -17,16 +17,16 @@ public class IntroAcitity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro);
-        executeFragment(MAIN_TAG);
+        executeFragment(MAIN_TAG, 0);
     }
 
     private final String MAIN_TAG = "mainfragment";
 
     private final String ENTRY_TAG = "entryfragment";
 
-    private final String GAME_TAG = "gameinfofragment";
+    private final String GAME_LIST_TAG = "game_list_";
 
-    public void executeFragment(String tag) {
+    public void executeFragment(String tag, int pos) {
 
 //        Fragment fragment = getSupportFragmentManager().findFragmentByTag(tag);
 
@@ -47,11 +47,11 @@ public class IntroAcitity extends BaseActivity {
                     .replace(R.id.container, fragment, tag)
                     .addToBackStack(null)
                     .commitAllowingStateLoss();
-        }else if(tag.equalsIgnoreCase(GAME_TAG)) {
-            fragment = new GameInfoListFragment();
+        }else if(tag.equalsIgnoreCase(GAME_LIST_TAG)) {
+            fragment = new GameInfoListFragment(pos);
             getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.container, fragment, tag)
+                    .replace(R.id.container, fragment, tag+pos)
                     .addToBackStack(null)
                     .commitAllowingStateLoss();
         }
@@ -77,8 +77,13 @@ public class IntroAcitity extends BaseActivity {
             }else {
                 onBackPressed();
             }
-        }else if(item.getItemId() == R.id.action_settings) {
+        }else if(item.getItemId() == R.id.action_license) {
             Intent intent = new Intent(getApplicationContext(), InfoActivity.class);
+            intent.putExtra(INTENT_INFO, ACTION_LICENSE);
+            startActivity(intent);
+        }else if(item.getItemId() == R.id.action_information){
+            Intent intent = new Intent(getApplicationContext(), InfoActivity.class);
+            intent.putExtra(INTENT_INFO, ACTION_INFO);
             startActivity(intent);
         }
 

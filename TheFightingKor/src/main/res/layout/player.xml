@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"/>
 
     <TextView
-            android:id="@+id/player_etc_info"
+            android:id="@+id/player_group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 

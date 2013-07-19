@@ -8,6 +8,11 @@ import android.support.v4.app.FragmentActivity;
  */
 public class BaseActivity extends FragmentActivity {
 
+    protected final String INTENT_INFO = "action_info";
+
+    protected final int ACTION_INFO = 0;
+    protected final int ACTION_LICENSE = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

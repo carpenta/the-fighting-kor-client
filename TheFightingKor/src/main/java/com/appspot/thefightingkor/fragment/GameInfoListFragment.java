@@ -30,6 +30,12 @@ public class GameInfoListFragment extends BaseFragment implements LoaderManager.
     private GameInfoListAdapter mAdapter;
     private ArrayList<Game> mList;
 
+    private int position = 1;
+
+    public GameInfoListFragment(int position) {
+        this.position = position;
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle bundle) {
 
@@ -63,20 +69,21 @@ public class GameInfoListFragment extends BaseFragment implements LoaderManager.
 
         displayLoading(true);
 
-        return new GameInfoServerLoader(getActivity());
+        return new GameInfoServerLoader(getActivity(), position);
     }
 
     @Override
     public void onLoadFinished(Loader<ArrayList<Game>> arrayListLoader, ArrayList<Game> games) {
 
-        if(games != null) {
+        if(games != null && games.size() > 0) {
             if(mList != null) {
                 mList.clear();
             }
             mList.addAll(games);
+
+            mAdapter.notifyDataSetChanged();
         }
         displayLoading(false);
-        mAdapter.notifyDataSetChanged();
     }
 
     @Override
