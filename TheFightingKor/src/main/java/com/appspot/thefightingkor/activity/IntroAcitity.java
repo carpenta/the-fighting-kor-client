@@ -1,5 +1,6 @@
 package com.appspot.thefightingkor.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -76,6 +77,9 @@ public class IntroAcitity extends BaseActivity {
             }else {
                 onBackPressed();
             }
+        }else if(item.getItemId() == R.id.action_settings) {
+            Intent intent = new Intent(getApplicationContext(), InfoActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
