@@ -14,12 +14,15 @@ import com.appspot.thefightingkor.adapter.MainListAdapter;
 
 import java.util.ArrayList;
 
+import butterknife.InjectView;
+import butterknife.Views;
+
 /**
  * Created by mc2e on 13. 7. 13..
  */
 public class MainFragment extends BaseFragment implements AdapterView.OnItemClickListener {
 
-    private ListView mListView;
+    @InjectView(R.id.main_list_view) ListView mListView;
 
     private MainListAdapter mAdapter;
 
@@ -51,7 +54,8 @@ public class MainFragment extends BaseFragment implements AdapterView.OnItemClic
     public void onViewCreated(View v, Bundle bundle) {
         super.onViewCreated(v, bundle);
 
-        mListView = (ListView)v.findViewById(R.id.main_list_view);
+        Views.inject(this, v);
+
         mListView.setOnItemClickListener(this);
         mAdapter = new MainListAdapter(getActivity(), mArenaName);
         mListView.setAdapter(mAdapter);

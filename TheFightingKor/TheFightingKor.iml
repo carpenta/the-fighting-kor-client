@@ -18,7 +18,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" inherit-compiler-output="false">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_6" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/build/classes/debug" />
     <exclude-output />
     <content url="file://$MODULE_DIR$">
@@ -70,7 +70,7 @@
     <orderEntry type="library" name="android-support-v4" level="project" />
     <orderEntry type="library" name="okhttp-1.1.0" level="project" />
     <orderEntry type="library" name="gson-2.2.4" level="project" />
-    <orderEntry type="library" name="butterknife-2.0.0" level="project" />
+    <orderEntry type="library" name="butterknife-2.0.1" level="project" />
   </component>
 </module>
 
