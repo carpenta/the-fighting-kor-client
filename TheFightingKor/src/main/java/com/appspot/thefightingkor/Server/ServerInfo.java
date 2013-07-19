@@ -11,8 +11,5 @@ public class ServerInfo {
 
     public static final String GAME_LIST_URL = BASE_URL+"fightinfo?ground=";
 
-    public static final String GAME_INFO_URL = BASE_URL+"fights?group=";
-
-    public static final String GAME_LIST_URL2 = BASE_URL+"tournaments";
-
+    public static final String GAME_INFO_URL = BASE_URL+"fight?gid=";
 }
