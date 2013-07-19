@@ -6,6 +6,4 @@
                 tools:context=".IntroAcitity"
                 android:id="@+id/container"
                 android:background="@color/bg_gray">
-
-
 </RelativeLayout>
