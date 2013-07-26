@@ -9,8 +9,8 @@ buildscript {
 apply plugin: 'android'
 
 dependencies {
-    //compile files('libs/android-support-v4.jar')
-    compile "com.android.support:support-v4:18.0.+"
+    compile files('libs/android-support-v4.jar')
+    //compile "com.android.support:support-v4:18.0.+"
     compile files('libs/butterknife-2.0.1.jar')
     compile files('libs/okhttp-1.1.1.jar')
     compile files('libs/volley.jar')
