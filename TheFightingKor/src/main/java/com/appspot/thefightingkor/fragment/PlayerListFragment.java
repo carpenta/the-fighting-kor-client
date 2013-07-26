@@ -4,16 +4,21 @@ import android.app.Activity;
 import android.support.v4.app.LoaderManager.*;
 import android.os.Bundle;
 import android.support.v4.content.Loader;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
+import com.android.volley.Response;
+import com.android.volley.toolbox.StringRequest;
 import com.appspot.thefightingkor.R;
+import com.appspot.thefightingkor.Server.ServerInfo;
 import com.appspot.thefightingkor.adapter.PlayerListAdapter;
 import com.appspot.thefightingkor.data.Player;
 import com.appspot.thefightingkor.loader.PlayerServerLoader;
+import com.appspot.thefightingkor.util.ResponseParser;
 
 import java.util.ArrayList;
 
@@ -23,7 +28,7 @@ import butterknife.Views;
 /**
  * Created by mc2e on 13. 6. 22..
  */
-public class PlayerListFragment extends BaseFragment implements LoaderCallbacks<ArrayList<Player>> {
+public class PlayerListFragment extends BaseFragment {
 
     @InjectView(R.id.player_list_view) ListView mListView;
 
@@ -59,8 +64,23 @@ public class PlayerListFragment extends BaseFragment implements LoaderCallbacks<
         mAdapter = new PlayerListAdapter(getActivity(), mList);
 
         mListView.setAdapter(mAdapter);
-        // start AsyncTaskLoader
-        getLoaderManager().initLoader(0, null, this);
+        displayLoading(true);
+        getApp().getRequestQueue().add(new StringRequest(ServerInfo.PLAYER_URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String s) {
+
+                Log.i("PlayerListFragment", s);
+                ResponseParser parser = new ResponseParser(s);
+
+                ArrayList<Player> result = parser.getPlayerList(getApp().getGSon());
+                if(result != null) {
+                    mList.clear();
+                    mList.addAll(result);
+                }
+                displayLoading(false);
+                mAdapter.notifyDataSetChanged();
+            }
+        }, null));
     }
 
     @Override
@@ -82,32 +102,5 @@ public class PlayerListFragment extends BaseFragment implements LoaderCallbacks<
             if(mProgress.getVisibility() == View.VISIBLE)
                 mProgress.setVisibility(View.GONE);
         }
-    }
-
-    @Override
-    public Loader<ArrayList<Player>> onCreateLoader(int i, Bundle bundle) {
-
-        displayLoading(true);
-
-        return new PlayerServerLoader(getActivity());
-    }
-
-    @Override
-    public void onLoadFinished(Loader<ArrayList<Player>> arrayListLoader, ArrayList<Player> players) {
-
-        if(players != null) {
-            if(mList != null)
-                mList.clear();
-
-            mList.addAll(players);
-
-            mAdapter.notifyDataSetChanged();
-        }
-        displayLoading(false);
-    }
-
-    @Override
-    public void onLoaderReset(Loader<ArrayList<Player>> arrayListLoader) {
-
     }
 }
