@@ -5,10 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.appspot.thefightingkor.R;
 import com.appspot.thefightingkor.data.Player;
+import com.appspot.thefightingkor.util.Utils;
 
 import java.util.List;
 
@@ -20,8 +22,12 @@ import butterknife.Views;
  */
 public class PlayerListAdapter extends ArrayAdapter<Player> {
 
+    private String[] gradeLevel = new String[5];
+
     public PlayerListAdapter(Context context, List<Player> obj) {
         super(context, 0, obj);
+
+        gradeLevel = context.getResources().getStringArray(R.array.grade_level);
     }
 
     @Override
@@ -50,22 +56,22 @@ public class PlayerListAdapter extends ArrayAdapter<Player> {
 
     private void setData(Holder h, Player item) {
 
-        h.id.setText(item.getId());
         h.name.setText(item.getName());
         h.association.setText(item.getAssoc());
         h.weight.setText(item.getWeight());
-        h.grade.setText(item.getGrade());
         h.group.setText(item.getGroup());
+
+        int res = Utils.getImageRes(gradeLevel, item.getGrade());
+        h.image.setImageResource(res);
     }
 
     class Holder {
 
-        @InjectView(R.id.player_id)         TextView id;
         @InjectView(R.id.player_name)       TextView name;
         @InjectView(R.id.player_assoc)      TextView association;
         @InjectView(R.id.player_weight)     TextView weight;
-        @InjectView(R.id.player_grade)      TextView grade;
-        @InjectView(R.id.player_group)   TextView group;
+        @InjectView(R.id.player_group)      TextView group;
+        @InjectView(R.id.player_image)      ImageView image;
 
         public Holder(View v) {
             Views.inject(this, v);

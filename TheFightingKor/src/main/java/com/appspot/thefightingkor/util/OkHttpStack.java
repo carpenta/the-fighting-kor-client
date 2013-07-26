@@ -15,6 +15,7 @@ public class OkHttpStack extends HurlStack {
     private final OkHttpClient client;
 
     public OkHttpStack() {
+
         this(new OkHttpClient());
     }
 
