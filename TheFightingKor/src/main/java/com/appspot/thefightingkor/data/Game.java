@@ -42,11 +42,32 @@ public class Game {
         return status;
     }
 
+    public void setStatus(String result) {
+        this.status = result;
+    }
+
+
     public String getWinner() {
         return winner;
     }
 
     public String getTournamentNum() {
         return tournamentNum;
+    }
+
+    private boolean isStillPlaying = false;
+
+    public boolean isStillPlaying() {
+
+        if(getStatus() != null) {
+
+            if(status.equalsIgnoreCase("running")) {
+                isStillPlaying = true;
+            }else {
+                isStillPlaying = false;
+            }
+        }
+
+        return isStillPlaying;
     }
 }

@@ -44,6 +44,17 @@ public class ResponseParser {
         return result;
     }
 
+    public Game getGameInfo(Gson gson) {
+
+        Game result = null;
+
+        JsonParser parser = new JsonParser();
+
+        result = gson.fromJson(parser.parse(json).getAsJsonObject(), Game.class);
+
+        return result;
+    }
+
     public ArrayList<Player> getPlayerList(Gson gson) {
 
         ArrayList<Player> result = new ArrayList<Player>();

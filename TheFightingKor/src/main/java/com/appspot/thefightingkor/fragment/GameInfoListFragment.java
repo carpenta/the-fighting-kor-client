@@ -5,8 +5,12 @@ import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
@@ -27,7 +31,7 @@ import butterknife.Views;
 /**
  * Created by mc2e on 13. 7. 14..
  */
-public class GameInfoListFragment extends BaseFragment {
+public class GameInfoListFragment extends BaseFragment implements AdapterView.OnItemClickListener {
 
     @InjectView(R.id.game_list_view) ListView mListView;
     @InjectView(R.id.game_list_progressbar) ProgressBar mProgress;
@@ -50,6 +54,9 @@ public class GameInfoListFragment extends BaseFragment {
         mList = new ArrayList<Game>();
 
         View v = inflater.inflate(R.layout.fragment_game_list, container, false);
+
+        setHasOptionsMenu(true);
+
         return v;
     }
 
@@ -60,8 +67,18 @@ public class GameInfoListFragment extends BaseFragment {
 
         mAdapter = new GameInfoListAdapter(getActivity(), mList);
         mListView.setAdapter(mAdapter);
+        mListView.setOnItemClickListener(this);
 
-        //getLoaderManager().initLoader(0, null, this);
+        request();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
+
+    private void request() {
+
         displayLoading(true);
         getApp().getRequestQueue().add(new StringRequest(ServerInfo.GAME_LIST_URL+position, new Response.Listener<String>() {
             @Override
@@ -81,11 +98,6 @@ public class GameInfoListFragment extends BaseFragment {
         }, null));
     }
 
-    @Override
-    public void onPause() {
-        super.onPause();
-    }
-
     private void displayLoading(boolean show) {
 
         if(mProgress == null)
@@ -100,4 +112,25 @@ public class GameInfoListFragment extends BaseFragment {
                 mProgress.setVisibility(View.GONE);
         }
     }
-}
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+    } //
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+
+        inflater.inflate(R.menu.sub_menu, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if(item.getItemId() == R.id.action_update) {
+            request();
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+} //
