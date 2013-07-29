@@ -7,9 +7,13 @@ public class ServerInfo {
 
     private static final String BASE_URL = "http://the-fighting-kor.appspot.com/";
 
-    public static final String PLAYER_URL = BASE_URL+"json";
+    public static final String PLAYER_LIST_URL = BASE_URL+"player";
 
-    public static final String GAME_LIST_URL = BASE_URL+"fight?ground=";
+    public static final String PLAYER_INFO_URL = PLAYER_LIST_URL+"?id=";
 
-    public static final String GAME_INFO_URL = BASE_URL+"fight?gid=";
+    private static final String GAME_URL = BASE_URL+"fight";
+
+    public static final String GAME_LIST_URL = GAME_URL+"?ground=";
+
+    public static final String GAME_INFO_URL = GAME_URL+"?gid=";
 }

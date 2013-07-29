@@ -65,7 +65,7 @@ public class PlayerListFragment extends BaseFragment {
 
         mListView.setAdapter(mAdapter);
         displayLoading(true);
-        getApp().getRequestQueue().add(new StringRequest(ServerInfo.PLAYER_URL, new Response.Listener<String>() {
+        getApp().getRequestQueue().add(new StringRequest(ServerInfo.PLAYER_LIST_URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String s) {
 

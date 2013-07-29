@@ -46,7 +46,7 @@ public class PlayerServerLoader extends AsyncTaskLoader<ArrayList<Player>> {
 
 
         try {
-            URL site = new URL(ServerInfo.PLAYER_URL);
+            URL site = new URL(ServerInfo.PLAYER_LIST_URL);
 
             String json = get(site);
 
