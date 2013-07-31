@@ -13,10 +13,15 @@ import com.appspot.thefightingkor.fragment.MainFragment;
 
 public class IntroAcitity extends BaseActivity {
 
+    private String[] mTitles = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro);
+
+        mTitles = getResources().getStringArray(R.array.main_menu_array);
+
         executeFragment(MAIN_TAG, 0);
     }
 
@@ -48,7 +53,7 @@ public class IntroAcitity extends BaseActivity {
                     .addToBackStack(null)
                     .commitAllowingStateLoss();
         }else if(tag.equalsIgnoreCase(GAME_LIST_TAG)) {
-            fragment = new GameInfoListFragment(pos);
+            fragment = new GameInfoListFragment(pos, mTitles[pos-1]);
             getSupportFragmentManager()
                     .beginTransaction()
                     .replace(R.id.container, fragment, tag+pos)

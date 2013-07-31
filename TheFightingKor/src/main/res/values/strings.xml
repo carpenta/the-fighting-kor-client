@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">주짓수 챔피언쉽 뷰어</string>
+    <string name="title_main">주짓수 챔피언쉽</string>
     <string name="action_license">License</string>
     <string name="action_information">Information</string>
     <string-array name="main_menu_array">

@@ -38,6 +38,7 @@ public class MainFragment extends BaseFragment implements AdapterView.OnItemClic
 
         getActivity().getActionBar().setDisplayHomeAsUpEnabled(false);
         getActivity().getActionBar().setHomeButtonEnabled(false);
+        getActivity().getActionBar().setTitle(getResources().getString(R.string.title_main));
 
         String[] array = getActivity().getResources().getStringArray(R.array.main_menu_array);
 

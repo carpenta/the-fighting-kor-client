@@ -13,8 +13,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.android.volley.Response;
+import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.appspot.thefightingkor.R;
 import com.appspot.thefightingkor.Server.ServerInfo;
@@ -33,6 +35,8 @@ import butterknife.Views;
  */
 public class GameInfoListFragment extends BaseFragment implements AdapterView.OnItemClickListener {
 
+    private final String TAG = "GameInfoListFragment";
+
     @InjectView(R.id.game_list_view) ListView mListView;
     @InjectView(R.id.game_list_progressbar) ProgressBar mProgress;
 
@@ -41,8 +45,11 @@ public class GameInfoListFragment extends BaseFragment implements AdapterView.On
 
     private int position = 1;
 
-    public GameInfoListFragment(int position) {
+    private String mTitle = "";
+
+    public GameInfoListFragment(int position, String title) {
         this.position = position;
+        mTitle = title;
     }
 
     @Override
@@ -50,6 +57,7 @@ public class GameInfoListFragment extends BaseFragment implements AdapterView.On
 
         getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
         getActivity().getActionBar().setHomeButtonEnabled(true);
+        getActivity().getActionBar().setTitle(mTitle);
 
         mList = new ArrayList<Game>();
 
@@ -95,7 +103,15 @@ public class GameInfoListFragment extends BaseFragment implements AdapterView.On
                 displayLoading(false);
                 mAdapter.notifyDataSetChanged();
             }
-        }, null));
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+
+                Log.e(TAG,"Server Error : "+volleyError.getLocalizedMessage());
+                Toast.makeText(getActivity(), "server do not response.", Toast.LENGTH_SHORT).show();
+                displayLoading(false);
+            }
+        }));
     }
 
     private void displayLoading(boolean show) {

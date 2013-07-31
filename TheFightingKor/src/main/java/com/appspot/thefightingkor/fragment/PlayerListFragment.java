@@ -10,8 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.android.volley.Response;
+import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.appspot.thefightingkor.R;
 import com.appspot.thefightingkor.Server.ServerInfo;
@@ -29,6 +31,8 @@ import butterknife.Views;
  * Created by mc2e on 13. 6. 22..
  */
 public class PlayerListFragment extends BaseFragment {
+
+    private final String TAG = "PlayerListFragment";
 
     @InjectView(R.id.player_list_view) ListView mListView;
 
@@ -80,7 +84,16 @@ public class PlayerListFragment extends BaseFragment {
                 displayLoading(false);
                 mAdapter.notifyDataSetChanged();
             }
-        }, null));
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+
+                Log.e(TAG,"Server Error : "+volleyError.getLocalizedMessage());
+
+                Toast.makeText(getActivity(), "server do not response.", Toast.LENGTH_SHORT).show();
+                displayLoading(false);
+            }
+        }));
     }
 
     @Override
