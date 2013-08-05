@@ -8,16 +8,17 @@ buildscript {
 }
 apply plugin: 'android'
 
-dependencies {
-    compile "com.android.support:support-v4:18.0.+"
-    compile files('libs/butterknife-2.0.1.jar')
-    compile files('libs/okhttp-1.1.1.jar')
-    compile files('libs/volley.jar')
-    compile files('libs/gson-2.2.4.jar')
+repositories {
+    mavenCentral()
+}
 
-//    compile 'com.jakewharton:butterknife:2.0.1'
-//    compile "com.google.code.gson:gson:2.2.4"
-//    compile 'com.squareup.okhttp:okhttp:1.1.1'
+dependencies {
+
+    compile "com.android.support:support-v4:18.0.+"
+    compile files('libs/volley.jar')
+    compile 'com.jakewharton:butterknife:2.0.1'
+    compile "com.google.code.gson:gson:2.2.4"
+    compile 'com.squareup.okhttp:okhttp:1.1.1'
 }
 
 android {
