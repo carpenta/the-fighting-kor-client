@@ -14,9 +14,10 @@ public class Game {
     @SerializedName("player1") private Player player1;
     @SerializedName("player2") private Player player2;
     @SerializedName("status") private String status;
-    @SerializedName("winner") private String winner;
+    @SerializedName("winner") private Player winner;
     @SerializedName("tournament_num") private String tournamentNum;
     @SerializedName("playground_num") private String playgroundNum;
+    @SerializedName("fight_level") private String torunamentLevel;
 
     public String getPlaygroundNum() {
         return playgroundNum;
@@ -47,7 +48,7 @@ public class Game {
     }
 
 
-    public String getWinner() {
+    public Player getWinner() {
         return winner;
     }
 
