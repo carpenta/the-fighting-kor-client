@@ -16,4 +16,8 @@ public class ServerInfo {
     public static final String GAME_LIST_URL = GAME_URL+"?ground=";
 
     public static final String GAME_INFO_URL = GAME_URL+"?gid=";
+
+    public static final String GAME_RESULT_LIST = GAME_URL+"tournaments";
+
+    public static final String GAME_RESULT_INFO = GAME_RESULT_LIST+"?id=";
 }
