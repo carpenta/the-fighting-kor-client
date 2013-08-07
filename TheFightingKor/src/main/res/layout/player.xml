@@ -42,7 +42,14 @@
                 android:id="@+id/player_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-
     </LinearLayout>
+
+    <ImageView
+            android:visibility="gone"
+            android:id="@+id/medal_result"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:src="@drawable/medal_gold"
+            android:layout_margin="5dp"/>
 
 </LinearLayout>

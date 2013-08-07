@@ -3,11 +3,15 @@ package com.appspot.thefightingkor.util;
 import android.util.Log;
 
 import com.appspot.thefightingkor.data.Game;
+import com.appspot.thefightingkor.data.GameResultInfo;
+import com.appspot.thefightingkor.data.GameResultListInfo;
 import com.appspot.thefightingkor.data.Player;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
+
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -75,5 +79,39 @@ public class ResponseParser {
 
 
         return result;
+    }
+
+    public ArrayList<GameResultListInfo> getGameResultList(Gson gson) {
+
+        ArrayList<GameResultListInfo> result = new ArrayList<GameResultListInfo>();
+
+        JsonParser parser = new JsonParser();
+
+        JsonArray jsonArray = parser.parse(json).getAsJsonArray();
+
+        for (JsonElement item : jsonArray) {
+
+            Log.d("IntroActivity", "item: " + item.toString());
+
+            GameResultListInfo gameResult = gson.fromJson(item.getAsJsonObject(), GameResultListInfo.class);
+            result.add(gameResult);
+        }
+
+        Log.d("IntroActivity", "List Size: " + result.size());
+
+        return result;
+    }
+
+    public GameResultInfo getGameResultInfo(Gson gson) {
+
+        GameResultInfo info = new GameResultInfo();
+
+        JsonParser parser = new JsonParser();
+
+        JsonElement obj = parser.parse(json).getAsJsonObject();
+
+        info = gson.fromJson(obj, GameResultInfo.class);
+
+        return info;
     }
 }

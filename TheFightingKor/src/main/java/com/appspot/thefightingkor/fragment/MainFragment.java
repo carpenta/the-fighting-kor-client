@@ -9,7 +9,6 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.appspot.thefightingkor.R;
-import com.appspot.thefightingkor.activity.IntroAcitity;
 import com.appspot.thefightingkor.adapter.MainListAdapter;
 
 import java.util.ArrayList;
@@ -75,8 +74,10 @@ public class MainFragment extends BaseFragment implements AdapterView.OnItemClic
     @Override
     public void onItemClick(AdapterView<?> parent, View v, int pos, long id) {
 
-        if(pos == 4) {
+        if(pos == 5) {
             executeFragmet(ENTRY_TAG, pos+1);
+        }else if(pos == 4) {
+            executeFragmet(GAME_RESULT_LIST, pos+1);
         }else {
             executeFragmet(GAME_LIST_TAG, pos+1);
         }

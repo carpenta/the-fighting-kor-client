@@ -14,7 +14,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.appspot.thefightingkor.R;
 import com.appspot.thefightingkor.Server.ServerInfo;
-import com.appspot.thefightingkor.adapter.PlayerListAdapter;
+import com.appspot.thefightingkor.adapter.GameResultInfoAdapter;
+import com.appspot.thefightingkor.data.GameResultInfo;
 import com.appspot.thefightingkor.data.Player;
 import com.appspot.thefightingkor.util.ResponseParser;
 
@@ -26,15 +27,23 @@ import butterknife.Views;
 /**
  * Created by mc2e on 13. 6. 22..
  */
-public class PlayerListFragment extends BaseFragment {
+public class GameResultInfoFragment extends BaseFragment {
 
     private final String TAG = "PlayerListFragment";
 
     @InjectView(R.id.player_list_view) ListView mListView;
 
-    private PlayerListAdapter mAdapter;
+    private GameResultInfoAdapter mAdapter;
 
     private ArrayList<Player> mList;
+
+    private String id = "";
+
+    public GameResultInfoFragment(String id) {
+
+        this.id = id;
+    }
+
 
     @Override
     public void onAttach(Activity activity) {
@@ -59,21 +68,28 @@ public class PlayerListFragment extends BaseFragment {
         super.onViewCreated(v, bundle);
         Views.inject(this, v);
 
-        mAdapter = new PlayerListAdapter(getActivity(), mList);
+        mAdapter = new GameResultInfoAdapter(getActivity(), mList);
 
         mListView.setAdapter(mAdapter);
         displayLoading(true);
-        getApp().getRequestQueue().add(new StringRequest(ServerInfo.PLAYER_LIST_URL, new Response.Listener<String>() {
+        getApp().getRequestQueue().add(new StringRequest(ServerInfo.GAME_RESULT_INFO+id, new Response.Listener<String>() {
             @Override
             public void onResponse(String s) {
 
-                Log.i("PlayerListFragment", s);
+                Log.i("GameResultInfoFragment", s);
                 ResponseParser parser = new ResponseParser(s);
 
-                ArrayList<Player> result = parser.getPlayerList(getApp().getGSon());
-                if(result != null) {
+                GameResultInfo info = parser.getGameResultInfo(getApp().getGSon());
+
+                getActivity().getActionBar().setTitle(info.getTournamentName());
+
+                if(info != null) {
                     mList.clear();
-                    mList.addAll(result);
+
+                    mList.add(info.getGold());
+                    mList.add(info.getSilver());
+                    mList.add(info.getBronze1());
+                    mList.add(info.getBronze2());
                 }
                 displayLoading(false);
                 mAdapter.notifyDataSetChanged();

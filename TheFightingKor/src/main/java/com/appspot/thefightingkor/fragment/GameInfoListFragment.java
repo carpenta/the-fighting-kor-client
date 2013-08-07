@@ -1,8 +1,6 @@
 package com.appspot.thefightingkor.fragment;
 
 import android.os.Bundle;
-import android.support.v4.app.LoaderManager;
-import android.support.v4.content.Loader;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -12,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.android.volley.Response;
@@ -22,7 +19,6 @@ import com.appspot.thefightingkor.R;
 import com.appspot.thefightingkor.Server.ServerInfo;
 import com.appspot.thefightingkor.adapter.GameInfoListAdapter;
 import com.appspot.thefightingkor.data.Game;
-import com.appspot.thefightingkor.loader.GameInfoServerLoader;
 import com.appspot.thefightingkor.util.ResponseParser;
 
 import java.util.ArrayList;
@@ -38,7 +34,6 @@ public class GameInfoListFragment extends BaseFragment implements AdapterView.On
     private final String TAG = "GameInfoListFragment";
 
     @InjectView(R.id.game_list_view) ListView mListView;
-    @InjectView(R.id.game_list_progressbar) ProgressBar mProgress;
 
     private GameInfoListAdapter mAdapter;
     private ArrayList<Game> mList;
@@ -112,21 +107,6 @@ public class GameInfoListFragment extends BaseFragment implements AdapterView.On
                 displayLoading(false);
             }
         }));
-    }
-
-    private void displayLoading(boolean show) {
-
-        if(mProgress == null)
-            return;
-
-        if(show) {
-            if(mProgress.getVisibility() == View.GONE)
-                mProgress.setVisibility(View.VISIBLE);
-        }else {
-
-            if(mProgress.getVisibility() == View.VISIBLE)
-                mProgress.setVisibility(View.GONE);
-        }
     }
 
     @Override

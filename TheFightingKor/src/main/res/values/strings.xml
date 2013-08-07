@@ -10,7 +10,8 @@
         <item>제 2 경기장</item>
         <item>제 3 경기장</item>
         <item>제 4 경기장</item>
-        <item>선수  명단</item>
+        <item>경기   결과</item>
+        <item>선수   명단</item>
     </string-array>
 
     <string-array name="grade_level">
