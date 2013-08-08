@@ -33,14 +33,6 @@
     <TextView
             android:textSize="17dp"
             android:gravity="center"
-            android:id="@+id/game_player_weight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="player weight"/>
-
-    <TextView
-            android:textSize="17dp"
-            android:gravity="center"
             android:id="@+id/game_player_group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

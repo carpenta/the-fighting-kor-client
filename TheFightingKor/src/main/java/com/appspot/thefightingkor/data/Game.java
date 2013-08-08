@@ -71,4 +71,8 @@ public class Game {
 
         return isStillPlaying;
     }
+
+    public String getLevel() {
+        return torunamentLevel;
+    }
 }

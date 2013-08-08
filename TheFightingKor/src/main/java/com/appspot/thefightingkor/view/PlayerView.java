@@ -16,7 +16,7 @@ import static butterknife.Views.findById;
  */
 public class PlayerView {
 
-    TextView name, assoc, weight, group;
+    TextView name, assoc, group;
     ImageView grade;
 
     String[] gradeLevel = new String[5];
@@ -26,7 +26,7 @@ public class PlayerView {
         name = findById(v, R.id.game_player_name);
         grade = findById(v, R.id.game_player_image);
         assoc = findById(v, R.id.game_player_assoc);
-        weight = findById(v, R.id.game_player_weight);
+        //weight = findById(v, R.id.game_player_weight);
         group = findById(v, R.id.game_player_group);
 
         gradeLevel = ctx.getResources().getStringArray(R.array.grade_level);
@@ -37,7 +37,6 @@ public class PlayerView {
         if(p != null) {
             name.setText(p.getName());
             assoc.setText(p.getAssoc());
-            weight.setText(p.getWeight());
             group.setText(p.getGroup());
 
             String playerGrade = p.getGrade();

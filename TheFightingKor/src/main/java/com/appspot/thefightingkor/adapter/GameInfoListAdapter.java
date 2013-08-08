@@ -72,19 +72,25 @@ public class GameInfoListAdapter extends ArrayAdapter<Game> {
 
     private void setValue(Holder h, Game item) {
 
-        h.gameName.setText(item.getInfo().getName());
+        String level = item.getLevel();
+
+        String result = getTournamentLevel(level);
+
+        if(result.equalsIgnoreCase("")) {
+            h.gameName.setText(item.getInfo().getName());
+        }else {
+            h.gameName.setText(item.getInfo().getName()+"\n"+result);
+        }
         h.gameResult.setText(getStatus(item));
-        h.tournamentNumber.setText(item.getTournamentNum());
         h.player1.setData(item.getPlayer1());
         h.player2.setData(item.getPlayer2());
-        h.winner.setText(setWinner(item));
+        h.winner.setText(getWinner(item));
     }
 
     class Holder {
 
         @InjectView(R.id.game_name) TextView gameName;
         @InjectView(R.id.game_result) TextView gameResult;
-        @InjectView(R.id.game_number) TextView tournamentNumber;
         @InjectView(R.id.game_player1) View player1View;
         @InjectView(R.id.game_player2) View player2View;
         @InjectView(R.id.game_winner) TextView winner;
@@ -114,7 +120,7 @@ public class GameInfoListAdapter extends ArrayAdapter<Game> {
         return result;
     }
 
-    private String setWinner(Game g) {
+    private String getWinner(Game g) {
 
         String result = "";
 
@@ -136,6 +142,18 @@ public class GameInfoListAdapter extends ArrayAdapter<Game> {
         }
 
         return result;
+    }
+
+    private String getTournamentLevel(String level) {
+
+        if(level.equalsIgnoreCase("4")) {
+            return getContext().getString(R.string.semi_final);
+
+        }else if(level.equalsIgnoreCase("2")) {
+            return getContext().getString(R.string.last_final);
+        }
+
+        return "";
     }
 
 }
