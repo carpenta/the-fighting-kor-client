@@ -19,6 +19,10 @@ public class BaseFragment extends Fragment {
 
     public final String GAME_LIST_TAG = "game_list_";
 
+    public final String GAME_RESULT_LIST = "game_result_list";
+
+    public final String GAME_RESULT_INFO = "game_result_info";
+
     private BaseApp mBaseApp = null;
 
     @Override
@@ -36,6 +40,19 @@ public class BaseFragment extends Fragment {
 
         if(activity != null) {
             activity.executeFragment(tag, pos);
+        }
+    }
+
+    public void executeFragmet(String tag, String id) {
+
+        if(activity != null) {
+            activity.executeFragment(tag, id);
+        }
+    }
+
+    public void displayLoading(boolean show) {
+        if(activity != null) {
+            activity.displayLoading(show);
         }
     }
 

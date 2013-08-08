@@ -1,13 +1,8 @@
 package com.appspot.thefightingkor.activity;
 
-import android.app.ActionBar;
 import android.os.Bundle;
-import android.text.Html;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.FrameLayout;
-import android.widget.ScrollView;
-import android.widget.TextView;
 
 import com.appspot.thefightingkor.R;
 
@@ -18,9 +13,6 @@ import butterknife.Views;
  * Created by Administrator on 13. 7. 19.
  */
 public class InfoActivity extends BaseActivity {
-
-    @InjectView(R.id.info_main_frame)
-    FrameLayout parentView;
 
     @InjectView(R.id.frame_license)
     View licenseView;
