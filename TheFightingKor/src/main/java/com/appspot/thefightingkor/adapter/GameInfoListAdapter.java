@@ -77,6 +77,7 @@ public class GameInfoListAdapter extends ArrayAdapter<Game> {
         h.tournamentNumber.setText(item.getTournamentNum());
         h.player1.setData(item.getPlayer1());
         h.player2.setData(item.getPlayer2());
+        h.winner.setText(setWinner(item));
     }
 
     class Holder {
@@ -86,6 +87,7 @@ public class GameInfoListAdapter extends ArrayAdapter<Game> {
         @InjectView(R.id.game_number) TextView tournamentNumber;
         @InjectView(R.id.game_player1) View player1View;
         @InjectView(R.id.game_player2) View player2View;
+        @InjectView(R.id.game_winner) TextView winner;
 
         PlayerView player1;
         PlayerView player2;
@@ -106,6 +108,30 @@ public class GameInfoListAdapter extends ArrayAdapter<Game> {
                 result = getContext().getString(R.string.text_game_play);
             }else {
                 result = getContext().getString(R.string.text_game_end);
+            }
+        }
+
+        return result;
+    }
+
+    private String setWinner(Game g) {
+
+        String result = "";
+
+        String winnerId = g.getWinner().getId();
+
+        String player1Id = g.getPlayer1().getId();
+
+        String player2Id = g.getPlayer2().getId();
+
+        if(winnerId == null || winnerId.equalsIgnoreCase("")) {
+            return "";
+        }else {
+
+            if (winnerId.equalsIgnoreCase(player1Id)) {
+                result = "WINNER\n"+g.getPlayer1().getName();
+            }else if(winnerId.equalsIgnoreCase(player2Id)) {
+                result = "WINNER\n"+g.getPlayer2().getName();
             }
         }
 
