@@ -33,11 +33,15 @@ public class GameResultInfoFragment extends BaseFragment {
 
     @InjectView(R.id.player_list_view) ListView mListView;
 
+    @InjectView(R.id.player_list_sorry) View mSorryView;
+
     private GameResultInfoAdapter mAdapter;
 
     private ArrayList<Player> mList;
 
     private String id = "";
+
+    private String INVALID_STRING = "";
 
     public GameResultInfoFragment(String id) {
 
@@ -48,6 +52,7 @@ public class GameResultInfoFragment extends BaseFragment {
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
+        INVALID_STRING = getString(R.string.semi_winner);
     }
 
     @Override
@@ -86,13 +91,33 @@ public class GameResultInfoFragment extends BaseFragment {
                 if(info != null) {
                     mList.clear();
 
-                    mList.add(info.getGold());
-                    mList.add(info.getSilver());
-                    mList.add(info.getBronze1());
-                    mList.add(info.getBronze2());
+                    if(checkValidation(info.getGold())) {
+                        mList.add(info.getGold());
+                    }
+
+                    if(checkValidation(info.getSilver())) {
+                        mList.add(info.getSilver());
+                    }
+
+                    if(checkValidation(info.getBronze1())) {
+                        mList.add(info.getBronze1());
+                    }
+
+                    if(checkValidation(info.getBronze2())) {
+                        mList.add(info.getBronze2());
+                    }
+
                 }
+
+                if(mList == null || mList.size() == 0) {
+                    setSorryView(true);
+                }else {
+                    setSorryView(false);
+                    mAdapter.notifyDataSetChanged();
+                }
+
                 displayLoading(false);
-                mAdapter.notifyDataSetChanged();
+
             }
         }, new Response.ErrorListener() {
             @Override
@@ -100,7 +125,8 @@ public class GameResultInfoFragment extends BaseFragment {
 
                 Log.e(TAG,"Server Error : "+volleyError.getLocalizedMessage());
 
-                Toast.makeText(getActivity(), "server do not response.", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(), "server do not response.", Toast.LENGTH_SHORT).show();
+                setSorryView(true);
                 displayLoading(false);
             }
         }));
@@ -110,5 +136,32 @@ public class GameResultInfoFragment extends BaseFragment {
     public void onPause() {
         super.onPause();
 
+    }
+
+    private boolean checkValidation(Player p) {
+
+        boolean result = false;
+
+        if(p.getName()== null || p.getName().equalsIgnoreCase("") || p.getName().equalsIgnoreCase(INVALID_STRING)) {
+            // do not add
+            result = false;
+        }else {
+            result = true;
+        }
+
+        return result;
+    }
+
+    private void setSorryView(boolean isFail) {
+
+        if(isFail) {
+            mListView.setVisibility(View.GONE);
+            mSorryView.setVisibility(View.VISIBLE);
+        }else {
+            if(mListView.getVisibility()==View.GONE) {
+                mListView.setVisibility(View.VISIBLE);
+                mSorryView.setVisibility(View.GONE);
+            }
+        }
     }
 }

@@ -12,10 +12,10 @@ public class GameResultInfo {
     @SerializedName("id") private String id;
     @SerializedName("tournament_level") private String level;
 
-    @SerializedName("winner1") private Player gold;
-    @SerializedName("winner2") private Player silver;
-    @SerializedName("winner3") private Player bronze1;
-    @SerializedName("winner4") private Player bronze2;
+    @SerializedName("winner1") private Player gold = null;
+    @SerializedName("winner2") private Player silver = null;
+    @SerializedName("winner3") private Player bronze1 = null;
+    @SerializedName("winner4") private Player bronze2 = null;
 
     public String getTournamentName() {
         return tournamentName;

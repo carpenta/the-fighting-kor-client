@@ -34,6 +34,7 @@ public class GameInfoListFragment extends BaseFragment implements AdapterView.On
     private final String TAG = "GameInfoListFragment";
 
     @InjectView(R.id.game_list_view) ListView mListView;
+    @InjectView(R.id.game_list_sorry) View mSorryView;
 
     private GameInfoListAdapter mAdapter;
     private ArrayList<Game> mList;
@@ -95,6 +96,7 @@ public class GameInfoListFragment extends BaseFragment implements AdapterView.On
                     mList.clear();
                     mList.addAll(result);
                 }
+                setSorryView(false);
                 displayLoading(false);
                 mAdapter.notifyDataSetChanged();
             }
@@ -103,7 +105,8 @@ public class GameInfoListFragment extends BaseFragment implements AdapterView.On
             public void onErrorResponse(VolleyError volleyError) {
 
                 Log.e(TAG,"Server Error : "+volleyError.getLocalizedMessage());
-                Toast.makeText(getActivity(), "server do not response.", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(), "server do not response.", Toast.LENGTH_SHORT).show();
+                setSorryView(true);
                 displayLoading(false);
             }
         }));
@@ -128,5 +131,18 @@ public class GameInfoListFragment extends BaseFragment implements AdapterView.On
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void setSorryView(boolean isFail) {
+
+        if(isFail) {
+            mListView.setVisibility(View.GONE);
+            mSorryView.setVisibility(View.VISIBLE);
+        }else {
+            if(mListView.getVisibility()==View.GONE) {
+                mListView.setVisibility(View.VISIBLE);
+                mSorryView.setVisibility(View.GONE);
+            }
+        }
     }
 } //
